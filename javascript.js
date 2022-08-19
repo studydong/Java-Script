@@ -1,1 +1,6 @@
-alert("이 알람은 외부파일로 인해서 실행됩니다.");
+let message="이 변수는 다른 변수에서도 사용할 수 있어";
+let copy;
+
+copy=message;
+
+alert(copy);
