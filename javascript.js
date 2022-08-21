@@ -1,6 +1,16 @@
-let message="이 변수는 다른 변수에서도 사용할 수 있어";
-let copy;
+/*
+컨펌 모달창
+let result= confirm("당신은 사람입니까?");
 
-copy=message;
+alert(result);
+*/
 
-alert(copy);
+/* 
+let result= prompt("값을 입력하세요", ' ');
+
+alert(result);
+*/
+
+let result="hello";
+
+alert(result);
