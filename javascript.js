@@ -1,16 +1,58 @@
-/*
-컨펌 모달창
-let result= confirm("당신은 사람입니까?");
+/* 
+단항 연산자
 
-alert(result);
+let x=1;
+x = -x;
+
+alert(x);
 */
 
 /* 
-let result= prompt("값을 입력하세요", ' ');
+이항 연산자
 
-alert(result);
+let str="my" + "son";
+
+alert(str);
 */
 
-let result="hello";
+/* 
+이항 연산자에서 `+` 덧셈 연산자는 피 연산자가 문자열이라면
+나머지 피 연산자도 문자열로 인식
 
-alert(result);
+alert("my"+123);
+*/
+
+/* 
+이항 연산자에서 피 연산자가 2개이상 일 때, 좌측의 피 연산자가 숫자형이라면
+수학적 연산을 먼저 하고 문자열과 합쳐진다
+
+alert(1+4+"6"); // 문자열 "56" 출력
+*/
+
+/*
+단항 연산자에서 `+`을 숫자형이 아닌 자료형에 사용하면 숫자형으로 변환됩니다.
+하지만, 숫자형에 사용하면 음수던 양수던 상관없이 영향이 없습니다.
+
+alert(+"");     // 0 출력, 
+alert(+true);   // 1 출력,
+
+alert(+1);      // 아무런 변화없음 1출력
+
+let a= -2;
+alert(+a);      // 아무런 변화 없음 -2 출력
+*/
+
+/*
+후위형
+
+let counter = 0;
+alert( counter++ ); // 0
+alert( counter++ ); // 1이 출력 됩니다.
+*/
+
+/* 전위형
+
+let counter2 = 0;
+alert( ++counter ); // 1
+*/
+ 
