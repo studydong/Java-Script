@@ -11,9 +11,9 @@ if (userName == "이정훈") {
     
     if(password=='ㅇㅇ') {
         alert('보는 눈이 있네');
-    } else if (password='') {
+    } else if (password=='') {
         alert('엔터 쓰지마라. 다시 입력해');
-    } else if (password=null) {
+    } else if (password==null) {
         alert('종료하지마라. 다시 입력해');
     } else {
         alert('눈없냐? 다시 입력해.');
@@ -21,7 +21,7 @@ if (userName == "이정훈") {
 
 } else if(userName=='') {
     alert('엔터 쓰지마라. 다시 입력해');
-} else if(userName=null) {
+} else if(userName==null) {
     alert('종료하지마라. 다시 입력해');
 } else {
     alert('이름 틀렷잖아 빡대가리야?');
