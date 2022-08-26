@@ -1,22 +1,33 @@
-/* 2부터 num 값 까지 반복 수행.
-도중에 1과 자신을 제외한 숫자로 나눠지는 수가 있다면, 소수가 아니므로
-호출되지 않게 반복문을 종료시킴 
+/* 
+let a = +prompt('a?', '');
 
-소수인값만 출력되게 하며, 자신의 값이 조건에 포함되면 자신÷자신=0 이 되므로
-소수인 값도 소수가 아니라고 판단됩니다. 자신의 값은 조건에서 제외시키기
-
-결과적으로 소수값만 호출되게 로직을 짜보세요*/
-
-
-let num=prompt('값을 입력해주세요.','');
-
-outer:
-for(let i=2; i<=num; i++) {
-
-	for(let j=2; j<i; j++) {
-
-    if(i%j==0) continue outer;
-
+if (a == 0) {
+  alert( 0 );
 }
-alert(`소수는 ${i} 입니다.`);
+if (a == 1) {
+  alert( 1 );
 }
+
+if (a == 2 || a == 3) {
+  alert( '2,3' );
+}
+
+위의 if문을 switch문으로 변경해보기
+*/
+
+let a=+prompt('숫자입력','');
+
+switch(a) {
+    case 0: 
+    alert(0);
+    break;
+    
+    case 1:
+    alert(1);
+    break;
+    
+    case 2:
+    case 3:
+    alert ('2,3');
+    
+    }
