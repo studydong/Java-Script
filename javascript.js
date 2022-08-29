@@ -1,35 +1,20 @@
-let from = "Ann";
+let n = prompt('값을 입력하세요','');
+showPrimes(n);
 
-function showMessage(from, text) {
+function showPrimes(n) {
+  for(let i=2; i<=n; i++) {
 
-    from = '*' + from + '*'; // "from"을 좀 더 멋지게 꾸며줍니다.
-  
-    alert( from + ': ' + text );
-  }
+    if(isPrime(i))  alert(i);
+ }
 
- 
-  showMessage(from, "Hello"); // *Ann*: Hello
-  
-  // 함수는 복사된 값을 사용하기 때문에 바깥의 "from"은 값이 변경되지 않습니다.
-  alert( from ); // Ann
-
-
-
-
-
-
-
-let userName = 'John';
-
-function showMessage() {
-  userName = "Bob"; // (1) 외부 변수를 수정함
-
-  let message = 'Hello, ' + userName;
-  alert(message);
 }
+ 
+ function isPrime(n) {
+ 
+   for(let i=2; i<n; i++) {
 
-alert( userName ); // 함수 호출 전이므로 John 이 출력됨
+    if(n % i == 0) return false;
 
-showMessage();
-
-alert( userName ); // 함수에 의해 Bob 으로 값이 바뀜
+   }
+   return true;
+ }
