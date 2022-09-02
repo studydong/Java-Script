@@ -1,25 +1,39 @@
-/* 
-function ask(question, yes, no) {
-  if (confirm(question)) yes()
-  else no();
-  }
-  
-  ask(
-  "동의하십니까?",
-  function() { alert("동의하셨습니다."); },
-  function() { alert("취소 버튼을 누르셨습니다."); }
-  );
-*/
+describe("pow 함수 테스트", function () {
 
-// 위에 함수를 화살표 함수로 간소화 시키기
+  describe("x의 3제곱 테스트", function () {
 
-let ask = (question, yes, no) => {
-  if ( confirm(question) ) yes();
-  else no();
-}
+    function powTest(x) { // x 값을 인자로 받음
 
-ask(
-'동의하십니까?' ,
-() => alert('동의하셨습니다.') ,
-() => alert('취소 버튼을 눌렀습니다.') , 
-);
+      let result = x * x * x;
+
+      it(`${x} 의 3 제곱은 :: ${result}`, function () {
+        assert.equal(pow(x, 3), result);
+      });
+
+    }
+
+    for (let x = 1; x <= 5; x++) {
+      powTest(x);
+    }
+
+  });
+
+  describe("x의 4 제곱 테스트", function () {
+
+    function powTest(x) { // x 값을 인자로 받음
+
+      let result = x * x * x * x;
+
+      it(`${x} 의 4 제곱은 :: ${result}`, function () {
+        assert.equal(pow(x, 4), result);
+      });
+
+    }
+
+    for (let x = 1; x <= 5; x++) {
+      powTest(x);
+    }
+
+  });
+
+});

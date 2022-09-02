@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -9,4 +9,52 @@
     
     <script src="javascript.js"></script>    
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- 결과 출력에 사용되는 mocha css를 불러옵니다. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- Mocha 프레임워크 코드를 불러옵니다. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // 기본 셋업
+  </script>
+  <!-- chai를 불러옵니다 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai의 다양한 기능 중, assert를 전역에 선언합니다.
+    let assert = chai.assert;
+  </script>
+</head>
+
+<body>
+
+  <script>
+    function pow(x, n) {    // 1..2.. ~5
+      //x를 n번 곱해서 나오는 결과를 테스트 
+      let result = 1;
+
+      for(let i = 0; i < n; i++) {      // n번보다 1 작은만큼 수행
+        result *= x;    // x값이 2고, n이 3이라면, 반복문은 0,1,2 3번수행된다. 2를 3번곱한다. 
+      } 
+      
+      return result; // 값을 반환, 2*1 = 2, 2*2 = 4 , 2* 4 = 8
+    }
+  </script>
+
+  <!-- 테스트(describe, it...)가 있는 스크립트를 불러옵니다. -->
+  <script src="javascript.js"></script>
+
+  <!-- 테스트 결과를 id가 "mocha"인 요소에 출력하도록 합니다.-->
+  <div id="mocha"></div>
+
+  <!-- 테스트를 실행합니다! -->
+  <script>
+    mocha.run();
+  </script>
+</body>
+
 </html>
