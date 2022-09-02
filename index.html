@@ -33,8 +33,11 @@
 <body>
 
   <script>
-    function pow(x, n) {    // 1..2.. ~5
-      //x를 n번 곱해서 나오는 결과를 테스트 
+    function pow(x, n) {    
+
+      if(n < 0) return NaN;   // n이 음수라면 NaN 반환
+      if(Math.round(n) != n) return NaN;  //n이 소수점이 있다면 NaN 반환
+
       let result = 1;
 
       for(let i = 0; i < n; i++) {      // n번보다 1 작은만큼 수행
