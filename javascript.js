@@ -1,59 +1,34 @@
-/* 문제 1. 
-함수 pow의 테스트 코드를 보고 무엇이 잘못되었나 알아보세요.
+// 객체 `obj`의 프로퍼티 값이 숫자인 경우 그 값을 `두 배` 해주는 함수 `multiplyNumeric(obj)`을 
 
-문법적인 오류는 없고, 테스트는 문제없이 통과 했다.
-
-
-  it("주어진 숫자의 n 제곱", function () {
-    let x = 5;
-
-    let result = x;   // 5의 값을 반환 합니다. 
-    assert.equal(pow(x, 1), result);    // 5와 1을 인자로 넘기고 result를 비교 , 오류 x
-
-    result *= x;  // 25
-    assert.equal(pow(x, 2), result);  // 25 , 2 인자 넘김, 오류 x
-
-    result *= x;  // 125
-    assert.equal(pow(x, 3), result);  // 125, 
-  });
-
-*/
-
-/*
-1. 테스트는 문제 없이 통과 되겠지만, 하나의 it 블럭에 여러 개의 유스케이스를 넣었기 때문에
-하나라도 오류가 발생하면, 어디서 오류가 발생되었는지 확인하기 어렵다.
-==> 하나의 it 블럭에는 하나의 테스트만 진행하자
-*/
-
-/* 문제 해결  */
-
-describe('pow' , function() {
-
-it("5의 1 제곱", function () {
-  assert.equal( pow(5, 1), 5);
-});
-
-it.only("5의 2 제곱", function () {
-  assert.equal( pow(5, 2), 25);
-});
-
-it("n이 음수일때는 nan을 반환한다.", function () {
-  assert.isNaN( pow(5, -6));
-});
-
-});
+// 만들어보세요. `multiplyNumeric`은 아무것도 반환하지 않아도 괜찮습니다. 객체 자체를 수정해주기만 하면 됩니다.
 
 
-/* 번외 
-it 블럭을 여러 개로 쪼개면, 장점은 
-원하는 블럭만 테스트를 진행하게 할 수도 있습니다.
+// 함수 호출 전
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
 
-it.only를 사용한다면 해당 블럭만 테스트 합니다.
+alert(multiplyNumeric(menu));
 
-it.only("5의 2 제곱", function () {
-  assert.equal( pow(5, 2), 25);
-});
+// 함수 호출 후
+menu = {
+  width: 400,
+  height: 600,
+  title: "My menu"
+};
 
 
-*/
+function multiplyNumeric (obj) {
 
+  let sum = 0;
+
+  for (let key in obj) {
+    if (typeof obj[key] == 'number') {       // width, height 각각의 값을 2배로 부풀려야 한다.
+      obj[key] *= 2;
+    }
+  }
+
+  return sum;
+}

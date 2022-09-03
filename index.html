@@ -33,19 +33,7 @@
 <body>
 
   <script>
-    function pow(x, n) {    
-
-      if(n < 0) return NaN;   // n이 음수라면 NaN 반환
-      if(Math.round(n) != n) return NaN;  //n이 소수점이 있다면 NaN 반환
-
-      let result = 1;
-
-      for(let i = 0; i < n; i++) {      // n번보다 1 작은만큼 수행
-        result *= x;    // x값이 2고, n이 3이라면, 반복문은 0,1,2 3번수행된다. 2를 3번곱한다. 
-      } 
-      
-      return result; // 값을 반환, 2*1 = 2, 2*2 = 4 , 2* 4 = 8
-    }
+    
   </script>
 
   <!-- 테스트(describe, it...)가 있는 스크립트를 불러옵니다. -->
