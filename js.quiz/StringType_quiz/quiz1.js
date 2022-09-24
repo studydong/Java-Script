@@ -9,7 +9,7 @@ ucFirst("john") == "John";
 function ucFirst(name) {
 
     if (typeof name == 'string') {          // 1) 
-        if(!name) return alert(name.charAt()); // * 예외처리 - 1
+        if(!name) return '';     // * 예외처리 - 1
 
         return name[0].toUpperCase() + name.slice(1);   // 2)
     }
